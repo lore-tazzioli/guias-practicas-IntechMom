@@ -1,18 +1,15 @@
 /* 1 - Crea tres variables para asignar el nombre, apellido y edad del personaje 
 principal de una película o serie que te guste */
 
-let firtName; 
-let lastName;
-let age;
+const firstName = "Dory"; 
+const lastName = "Desconocido";
+const age = 2;
 
 /* 2 - Imprime en pantalla el nombre y el tipo de cada variable anterior */
 
-firstName = "Dory";
-lastName = "Desconocido";
-age = 2;
-console.log("Nombre: " + firstName + ", tipo: " + typeof firstName);
-console.log("Apellido: " + lastName + ", tipo: " + typeof lastName);
-console.log("Edad: " + age + ", tipo: " + typeof age);
+console.log("Nombre: " + firstName + ", Tipo: " + typeof firstName);
+console.log("Apellido: " + lastName + ", Tipo: " + typeof lastName);
+console.log("Edad: " + age + ", Tipo: " + typeof age);
 
 /* 3 - Crea una variable llamada city y asigna 5 lugares que aparezcan en la película o seríe. 
 Después de cada asignación imprime el contenido de la variable. */
@@ -54,11 +51,11 @@ typeof(true);
 console.log(typeof(true));
 
 typeof(1 != 2);
-// Predicción: number
+// Predicción: boolean
 console.log(typeof(1 != 2));
 
 typeof("1" - "3");
-// Predicción: string
+// Predicción: number
 console.log(typeof("1" - "3"));
 
 typeof("hamburguer" + "s");
@@ -74,15 +71,15 @@ typeof("johnny" + 5);
 console.log(typeof("johnny" + 5));
 
 typeof("johnny" - 5);
-// Predicción: string
+// Predicción: number
 console.log(typeof("johnny" - 5));
 
 typeof(99 * "luftbaloons");
-// Predicción: string
+// Predicción: number
 console.log(typeof(99 * "luftbaloons"));
 
 typeof("hamburguers" - "s");
-// Predicción: string
+// Predicción: number
 console.log(typeof("hamburguers" - "s"));
 
 /* 5 - Convierte a mayusculas la frase ‘al que madruga Dios lo ayuda’ */
@@ -110,7 +107,7 @@ de descuento es 20%, el precio del producto con descuento es 80.
 El programa debe imprimir en pantalla:
 Su producto tiene un precio de 80, el descuento fue del 20%. */
 
-
+let total;
 function precio (total){
     total = total-(total*0.20);
     let mensaje = "Su producto tiene un precio de " + total + ", el descuento fue del 20%."
@@ -137,6 +134,7 @@ nota: La fórmula del perímetro se deba cargar en una constante. */
 
 let diametro;
 const perimetro = (diametro) => {
+    let resultado;
     resultado = Math.PI * diametro;
     console.log(resultado);
 }
