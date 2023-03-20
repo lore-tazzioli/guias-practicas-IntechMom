@@ -36,14 +36,14 @@ la letra r en la frase
 “Erre con erre cigarro erre con erre barril rápido ruedan los 
 carros cargados de azúcar del ferrocarril”. Imprime el resultado en pantalla */
 
-let array = "Erre".split([]);
-let cont = 0;
+let array = "Erre con erre cigarro erre con erre barril rápido ruedan los carros cargados de azúcar del ferrocarril".split([]);
+let count = 0;
 for (i = 0; i < array.length; i++){
-    if array[i] == "r" {
-        cont = cont + 1;
+    if (array[i] == "r") {
+        count = count + 1;
     }
 }
-console.log("la frase posee " + cont + " letras r en total");
+console.log("la frase posee " + count + " letras r en total");
 
 /* 6 - Con el siguiente array realiza las operaciones que se presentan a continuación:
 let people = ["Ana", "Carolina", "Laura", "Natalia", “Fernanda”];*/
@@ -79,7 +79,8 @@ Imprime enpantalla la variable people. */
 people.push("Lorena");
 console.log(people);
 
-/* f) Escribe el comando para retornar el indice de Natalia (indexOf) e imprimelo en pantalla. */
+/* f) Escribe el comando para retornar el indice de Natalia (indexOf) e imprimelo 
+en pantalla. */
 
 people.indexOf("Natalia");
 
@@ -96,7 +97,24 @@ people.length - 1;
 valores de tu canción. Guárdalas en las variables song1. song2 y song3. 
 Cada una debe contener las propiedades nombre, artista, año y album. */
 
-
+const song1 = {
+    name : "Flowers",
+    artist : "Miley Cyrus",
+    year : 2023,
+    album : "Endless Summer Vacation",
+}
+const song2 = {
+    name : "Mon Amour",
+    artist : "Aitana, Zzoilo",
+    year : 2022,
+    album : "Alegría TikkTokk",
+}
+const song3 = {
+    name : "Memories",
+    artist : "Maroon 5",
+    year : 2021,
+    album : "Jordi",
+}
 
 /* 8 - Declarar un clase Tienda que permita registrar:
 Nombre de la tienda.
@@ -105,10 +123,22 @@ Propietario de la tienda.
 Rubro de la tienda.
 Luego invocar al menos tres (3) objetos usando esta clase */
 
+class Tienda {
+    constructor (name, address, owner, item) {
+      this.name = name;
+      this.address = address;
+      this.owner = owner;
+      this.item = item;
+    }
+}
 
+const store1 = new Tienda("Taty", "Roma 1212", "Jose Perez", "Verduleria");
+const store2 = new Tienda("Burbujas", "Santa Fe 3422", "Lucía Gomez", "Lavanderia");
+const store3 = new Tienda("Vaca negra", "Buenos Aires 1200", "Maria Lopez", "Carnicería");
 
 /* 9 - Instanciar 5 tiendas usando la clase Tienda que se creó en el punto anterior */
 
+//No entiendo la diferencia con las 3 tiendas que cree antes :P
 
 
 /* 10 - Dado el objeto:
@@ -122,5 +152,18 @@ const lion = {
 Obtener e imprimir por separado e valor de 3 propiedades usando notación de punto y 
 de corchetes. */
 
+const lion = {
+    species: "Panthera leo",
+    foots: 4,
+    hasTail: true,
+    weight: "190kg",
+    isMammal: true,
+};
+console.log(lion.species);
+console.log(lion.foots);
+console.log(lion.hasTail);
+console.log(lion["species"]);
+console.log(lion["weight"]);
+console.log(lion["isMammal"]);
 
 
