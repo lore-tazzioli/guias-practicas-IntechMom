@@ -4,7 +4,7 @@ let myArray = [];
 let cont = 0
 for (let i = 0; i < 5; i++) { 
     myArray.push(cont);
-    cont = cont + 1;
+    cont += 1;
 } 
 console.log(myArray);
 
@@ -18,7 +18,7 @@ console.log("Este array tiene " + myAlphabet.length + " elementos");
 const fruits = [‘pera’, ‘manzana’, ‘durazno’, ‘banana’] */
 
 const fruits = ["pera", "manzana", "durazno", "banana"];
-for (i = 0; i < fruits.length; i++) { 
+for (let i = 0; i < fruits.length; i++) { 
     console.log(fruits[i])
 }
 
@@ -26,8 +26,8 @@ for (i = 0; i < fruits.length; i++) {
 const numbers = [1, 3, 5, 7, 9] */
 
 const numbers = [1, 3, 5, 7, 9]
-for (i = 0; i < numbers.length; i++) {
-    numbers[i] = numbers[i] + 2;
+for (let i = 0; i < numbers.length; i++) {
+    numbers[i] += 2;
 }
 console.log(numbers);
 
@@ -38,9 +38,9 @@ carros cargados de azúcar del ferrocarril”. Imprime el resultado en pantalla 
 
 let array = "Erre con erre cigarro erre con erre barril rápido ruedan los carros cargados de azúcar del ferrocarril".split([]);
 let count = 0;
-for (i = 0; i < array.length; i++){
+for (let i = 0; i < array.length; i++){
     if (array[i] == "r") {
-        count = count + 1;
+        count += 1;
     }
 }
 console.log("la frase posee " + count + " letras r en total");
@@ -50,15 +50,13 @@ let people = ["Ana", "Carolina", "Laura", "Natalia", “Fernanda”];*/
 /* a) Usando un for loop itera el array e imprime el nombre de cada persona.*/
 
 let people = ["Ana", "Carolina", "Laura", "Natalia", "Fernanda"];
-for (i = 0; i < people.length; i++) { 
+for (let i = 0; i < people.length; i++) { 
     console.log(people[i])
 }
 
 /* b) Escribe el comando para eliminar a Carolina del array. 
 Imprime en pantalla la variable people.*/
-people.shift();
-people.shift();
-people.unshift("Ana");
+people.splice(1, 1);
 console.log(people);
 
 /* c) Escribe el comando para eliminar a Fernanda. 
@@ -82,7 +80,8 @@ console.log(people);
 /* f) Escribe el comando para retornar el indice de Natalia (indexOf) e imprimelo 
 en pantalla. */
 
-people.indexOf("Natalia");
+console.log(people.indexOf("Natalia"));
+
 
 /* g)Hay 2 formas para acceder al indice de tu nombre (que es el último valor del array), 
 describe cuáles son. */
